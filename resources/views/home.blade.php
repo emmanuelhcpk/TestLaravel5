@@ -5,12 +5,16 @@
 	<div class="row">
 		<div class="col-md-10 col-md-offset-1">
 			<div class="panel panel-default">
-				<div class="panel-heading">Home</div>
+				<div class="panel-heading">Usuarios registrados</div>
 
 				<div class="panel-body">
-					<div class="col-md-2 well ">Joda</div>
-
-					Hey You are logged in!
+					<h4>{{'El usuario en sesion es :  '.Auth::user()->full_name()}}</h4>
+					<ul>
+					@foreach ($user as $us)
+					<li>{{ $us->full_name()	}}</li>
+					@endforeach	
+					</ul>
+					
 				</div>
 			</div>
 		</div>

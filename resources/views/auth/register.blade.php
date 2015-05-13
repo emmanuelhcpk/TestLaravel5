@@ -22,43 +22,43 @@
 						<input type="hidden" name="_token" value="{{ csrf_token() }}">
 
 						<div class="form-group">
-							<label class="col-md-4 control-label">Name</label>
+							<label class="col-md-4 control-label">First name</label>
 							<div class="col-md-6">
-								<input type="text" class="form-control" name="name" value="{{ old('name') }}">
+								{!! Form::text('first_name',old('first_name'),['class'=>'form-control'])!!}
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="col-md-4 control-label">NickName</label>
+							<label class="col-md-4 control-label">Last names</label>
 							<div class="col-md-6">
-								<input type="text" class="form-control" name="nickname" value="{{ old('nickname') }}">
+								{!! Form::text('last_name',null,['class'=>'form-control']) !!}
 							</div>
 						</div>
 
 						<div class="form-group">
 							<label class="col-md-4 control-label">E-Mail Address</label>
 							<div class="col-md-6">
-								<input type="email" class="form-control" name="email" value="{{ old('email') }}">
+								{!! Form::email('email',old('email'),['class'=>'form-control'])!!}
 							</div>
 						</div>
 
 						<div class="form-group">
 							<label class="col-md-4 control-label">Password</label>
 							<div class="col-md-6">
-								<input type="password" class="form-control" name="password">
+								{!!	Form::password('password',['class'=>'form-control'])!!}
 							</div>
 						</div>
 
 						<div class="form-group">
 							<label class="col-md-4 control-label">Confirm Password</label>
 							<div class="col-md-6">
-								<input type="password" class="form-control" name="password_confirmation">
+								{!!	Form::password('password_confirmation',['class'=>'form-control'])!!}
 							</div>
 						</div>
 
 						<div class="form-group">
 							<div class="col-md-6 col-md-offset-4">
-								<button type="submit" class="btn btn-primary">
-									Register
+								{!!Form::submit('Enviar',['class'=>'btn-primary'])!!}
+									
 								</button>
 							</div>
 						</div>

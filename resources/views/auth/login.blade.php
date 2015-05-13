@@ -24,14 +24,14 @@
 						<div class="form-group">
 							<label class="col-md-4 control-label">E-Mail Address</label>
 							<div class="col-md-6">
-								<input type="email" class="form-control" name="email" value="{{ old('email') }}">
+								{!! Form::email('email',old('email'),['class'=>'form-control'])!!}
 							</div>
 						</div>
 
 						<div class="form-group">
 							<label class="col-md-4 control-label">Password</label>
 							<div class="col-md-6">
-								<input type="password" class="form-control" name="password">
+								{!! Form::password('password',['class'=>'form-control'])!!}
 							</div>
 						</div>
 
@@ -39,7 +39,7 @@
 							<div class="col-md-6 col-md-offset-4">
 								<div class="checkbox">
 									<label>
-										<input type="checkbox" name="remember"> Remember Me
+										{!!Form::checkbox('remember')!!} Recordar
 									</label>
 								</div>
 							</div>

@@ -21,3 +21,10 @@ Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
+Route::get('example',function ()
+{
+
+$user = "emmanuel";
+$hola= "hola";
+	return view('estaticas.ayuda',compact('user','hola'));
+});

@@ -28,6 +28,8 @@ class UsersController extends Controller {
 		dd($user->profiles());
 	}
 
+	
+
 
 }
 

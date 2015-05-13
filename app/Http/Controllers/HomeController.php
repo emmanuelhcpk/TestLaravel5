@@ -31,9 +31,9 @@ class HomeController extends Controller {
 	 */
 	public function index()
 	{
-		$user=User::find(2);
-		return $user->nickname ;
-		//return view('home');
+		$user=User::all();
+		
+		return view('home',compact('user'));
 	}
 
 }

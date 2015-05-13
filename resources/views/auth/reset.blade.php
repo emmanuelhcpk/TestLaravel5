@@ -25,28 +25,28 @@
 						<div class="form-group">
 							<label class="col-md-4 control-label">E-Mail Address</label>
 							<div class="col-md-6">
-								<input type="email" class="form-control" name="email" value="{{ old('email') }}">
+								{!!	Form:email('email','null',['class'=>'form-control'])!!}
 							</div>
 						</div>
 
 						<div class="form-group">
 							<label class="col-md-4 control-label">Password</label>
 							<div class="col-md-6">
-								<input type="password" class="form-control" name="password">
+								{!! Form::password('password',['class'=>'form-control'])!!}
 							</div>
 						</div>
 
 						<div class="form-group">
 							<label class="col-md-4 control-label">Confirm Password</label>
 							<div class="col-md-6">
-								<input type="password" class="form-control" name="password_confirmation">
+								{!! Form::password('password_confirmation',['class'=>'form-control'])!!}
 							</div>
 						</div>
 
 						<div class="form-group">
 							<div class="col-md-6 col-md-offset-4">
-								<button type="submit" class="btn btn-primary">
-									Reset Password
+								{!!Form::submit('Resetear password',['class'=>'btn btn-primary'])!!}
+									
 								</button>
 							</div>
 						</div>
