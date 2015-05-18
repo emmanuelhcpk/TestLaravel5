@@ -21,10 +21,9 @@ Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
-Route::get('example',function ()
-{
+Route::group(['prefix'=>'admin','namespace'=>'\Admin'],function (){
 
-$user = "emmanuel";
-$hola= "hola";
-	return view('estaticas.ayuda',compact('user','hola'));
+Route::resource('users','UsersController');
+
 });
+

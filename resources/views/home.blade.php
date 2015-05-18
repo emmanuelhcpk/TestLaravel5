@@ -11,7 +11,9 @@
 					<h4>{{'El usuario en sesion es :  '.Auth::user()->full_name()}}</h4>
 					<ul>
 					@foreach ($user as $us)
-					<li>{{ $us->full_name()	}}</li>
+						@if($us->type!='admin')
+							<li>{{ $us->full_name()	}}</li>
+						@endif
 					@endforeach	
 					</ul>
 					

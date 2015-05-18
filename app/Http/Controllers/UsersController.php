@@ -28,7 +28,12 @@ class UsersController extends Controller {
 		dd($user->profiles());
 	}
 
-	
+	public function getName()
+	{
+			$hola;
+		return view('prueba',compact('hola'));
+
+	}
 
 
 }
